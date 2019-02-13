@@ -1,0 +1,149 @@
+body,h1,h2,h3,h4,ul,a{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	font-size: 16px;
+	width:100%;
+	overflow-x:hidden;
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none!important;
+	color: black;
+}
+a:hover{
+	color: #31C27C!important;
+}
+
+
+.footer{
+	height: 600px;
+	background: #333333;
+	color: #999999;
+}
+.footer a{
+	color: #999999;
+	font-size: 14px;
+}
+.footer h3{
+	padding-top: 80px;
+	padding-bottom: 50px;
+	font-size: 15px;
+}
+.footer_box{
+	max-width: 1200px;
+	min-width: 920px;
+	height: 470px;
+	margin: 0 auto;
+	border-bottom: 1px solid #353535;
+}
+@media only screen and (max-width: 1580px) {
+	.footer_box{
+		margin: 0 50px;
+	}
+}
+
+.footer_box,.footer_product ul,.footer_link ul,.footer_platform ul{
+	display: flex;
+	flex-wrap:wrap;
+}
+.footer_box a i{
+	display:block;
+	background: url(../images/footer.png) no-repeat;
+	height: 48px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.footer_download{
+	width: 30%;
+	margin-right: 10%;
+}
+.footer_download ul{
+	position: relative;
+	left: -20px;
+}
+.footer_download ul li{
+	float: left;
+	width: 25%;
+	height: 81px;
+	text-align: center;
+}
+
+.footer_download .icon_pc{
+	width:37px;
+}
+.footer_download .icon_mac{
+	width:46px;
+	background-position-x:-92px;
+}
+.footer_download .icon_android{
+	width:37px;
+	background-position-x:-190px;
+}
+.footer_download .icon_iphone{
+	width:34px;
+	background-position-x:-279px;
+}
+.footer_download a:nth-child(1):hover .icon_pc,.footer_download a:nth-child(1):hover .icon_mac,.footer_download a:nth-child(1):hover .icon_android,.footer_download a:nth-child(1):hover .icon_iphone,.footer_product a:nth-child(1):hover .icon_qmkg,.footer_product a:nth-child(1):hover .icon_qmss,.footer_product a:nth-child(1):hover .icon_qmqp{
+	background-position-y:-49px;
+}
+.footer_product{
+	width: 22%;
+	height: auto;
+	margin-right: 13%;
+}
+.footer_product ul{
+	margin-left: -20px;
+}
+.footer_product ul li{
+	width: 33.3%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.footer_product .icon_qmkg{
+	width: 41px;
+	background-position-x:-370px;
+}
+.footer_product .icon_qmss{
+	width: 37px;
+	background-position-x:-463px;
+}
+.footer_product .icon_qmqp{
+	width: 40px;
+	background-position-x:-563px;
+}
+.footer_link{
+	width: 25%;
+}
+.footer_link ul li{
+	width: 33%;
+	margin-bottom: 10px;
+}
+.footer_link ul li{
+	white-space: nowrap;
+}
+@media only screen and (max-width:1135px) {
+	.footer_link ul li{
+		width: 50%;
+	}
+}
+.footer_platform{
+	margin-top: -100px;
+}
+.footer_platform ul li{
+	margin-right: 30px;
+}
+.footer_copyright{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 10px;
+}
+.footer_copyright a{
+	font-size: 10px;
+}

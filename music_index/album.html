@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/album_style.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<iframe id="mainiframe" src="index.html" width="100%" height="142px" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" style="display: block;"></iframe>
+	<body>
+		<div class="album">
+			<div class="album_banner song_control">
+				<div class="song_left"><a href="JavaScript:;"><</a></div>
+				<div class="song_right"><a href="JavaScript:;">></a></div>
+				<div class="album_banner_img">
+					<ul>
+						<li class="item1"><a href="JavaScript:;"><img src="../imgs/album/1086901.jpg" alt="tp"  /></a></li>
+						<li class="item2"><a href="JavaScript:;"><img src="../imgs/album/1086907.jpg" alt="tp"  /></a></li>
+						<li class="item3"><a href="JavaScript:;"><img src="../imgs/album/1091297.jpg" alt="tp" /></a></li>
+						<li class="item4"><a href="JavaScript:;"><img src="../imgs/album/1089541.jpg" alt="tp" /></a></li>
+						<li class="item5"><a href="JavaScript:;"><img src="../imgs/album/1093129.jpg" alt="tp" /></a></li>
+						<li class="item6"><a href="JavaScript:;"><img src="../imgs/album/1093818.jpg" alt="tp" /></a></li>
+					</ul>
+				</div>
+				<div class="song_page">
+					<a href="JavaScript:;" class="active" onclick=""></a>
+					<a href="JavaScript:;" onclick=""></a>
+					<a href="JavaScript:;" onclick=""></a>
+					<a href="JavaScript:;" onclick=""></a>
+					<a href="JavaScript:;" onclick=""></a>
+					<a href="JavaScript:;" onclick=""></a>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<iframe src="footer.html" width="100%" height="600px" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" style="display: block;"></iframe>
+	<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			
+			var album_item =new Array();
+			var album_img=$(".album_banner_img li");
+			var album_point=$(".album_banner .song_page a");
+			for (var i=0,len=album_img.length;i<len;i++) {
+				album_img[i].index=i;
+				album_item[i]=album_img[i].className;
+			}
+			function album_for(){
+				for (var i=0,len=album_img.length;i<len;i++) {
+					album_img[i].className=album_item[i];
+					album_point[i].className="";
+					if (album_item[i]=="item1") {
+						album_point[i].className="active";
+					}
+				}
+			}
+			$(".song_right a").click(function(){
+				album_item.unshift(album_item[5]);
+				album_item.pop();
+				album_for();
+			})
+			$(".song_left a").click(function(){
+				album_item.push(album_item[0]);
+				album_item.shift();
+				album_for();
+			})
+			function point(){
+				var page_point=$(".song_page a");
+				page_point.click(function(){
+					var index=$(this).index();
+					for (var i=index,len=index+6;i<len;i++) {
+						num=i+1-index;
+						if (i<6) {
+							album_item[i]="item"+num;
+						} else{
+							j=i-6;
+							album_item[j]="item"+num;
+						}
+//						alert(i);
+					}
+					album_for();
+				})
+			}
+			point();
+			function time1(){
+				album_item.unshift(album_item[5]);
+				album_item.pop();
+				album_for();
+			}
+			var time = setInterval(time1, 4000);
+			$(".album_banner").hover(function(){
+				clearInterval(time);
+			})
+			$(".album_banner").mouseleave (function(){
+				time = setInterval(time1,4000);
+			})
+			
+			
+		})
+				
+	</script>
+	
+</html>

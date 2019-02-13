@@ -1,0 +1,602 @@
+a:hover{
+	color: #31C27C!important;
+}
+.active{
+	color: #31C27C!important;
+}
+img{
+	width: 100%;
+	height: 100%;
+	vertical-align:top;
+	border:none;
+}
+*{margin:0;padding:0}
+
+li{list-style:none}
+
+/*-----------------------------------------歌单推荐-------------------------------------------------*/
+.song{
+	background: linear-gradient(#F2F2F2,#FFFFFF);
+	width: 100%;
+	padding-top: 40px;
+	overflow: hidden;
+	position:relative;
+}
+.list_song,.new_song,.new_dish{
+	margin-top: -4px;
+	padding-bottom: 50px;
+}
+.song_control:hover a:nth-child(1){
+	transform: translateX(0%);
+}
+.song_control:hover a:nth-child(2){
+	transform: translateX(0%);
+}
+.song_left a:nth-child(1){
+	z-index: 3;
+	position: absolute;
+	top: 50%;
+	width: 80px;
+	height: 110px;
+	margin-top: -40px;
+	background:rgba(0,0,0,.05);
+	line-height: 100px;
+	font-size: 80px;
+	color: #333333;
+	text-align: center;
+	transform: translateX(-100%);
+	transition: .5s;
+}
+.song_left a:nth-child(1):hover{
+	color: black!important;
+	background:rgba(0,0,0,.1);
+
+}
+.song_right a:nth-child(1):hover{
+	color: black!important;
+	background:rgba(0,0,0,.1);
+}
+.song_right a:nth-child(1){
+	z-index: 3;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 80px;
+	height: 110px;
+	margin-top: -40px;
+	background:rgba(0,0,0,.05);
+	line-height: 100px;
+	font-size: 80px;
+	color: #333333;
+	text-align: center;
+	transform: translateX(100%);
+	transition: .5s;
+}
+.list_control{
+	max-width:1200px;
+	min-width: 920px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+@media only screen and (max-width: 1599px) {
+	.song>.list_control,.footer_box{
+		margin: 0 50px;
+	}
+}
+.list_control>.list-control{
+	margin-bottom: 40px;
+}
+.list_control div{
+	position: relative;
+	transition: 0.75s;
+}
+.list_song_title{
+	width: 650px;
+}
+.list_song_gun,.new_song_list,.commend_list,.new_dish_gun,.top_list,.song_mv_gun{
+	position: relative;
+}
+.list_song_gun,.new_dish_gun{
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.list_song_gun ul{
+	left: -100%;
+}
+
+.list_song_gun ul,.new_dish_gun ul{
+	position: relative;
+	width: 1000%;
+	display: flex;
+	
+	transition: 1s;
+	overflow: hidden;
+
+}
+/*.list_song_gun ul li div{
+	width: 240px;
+}*/
+.list_song_gun ul img,.new_dish_gun ul img{
+	width: 100%;
+	height:auto;
+}
+.list_song_gun ul li{
+	width:2%;
+}
+.list_song_gun ul a,.new_dish_gun ul a{
+	font-size: 15px;
+	
+}
+.list_song_gun .list_song_gun_i,.new_dish_gun .list_song_gun_i{
+	width: 90%;
+	min-width: 164px;
+	margin-bottom: 10px;
+}
+.list_song_gun .list_song_gun_play,.new_dish_gun .list_song_gun_play{
+	width:50px;
+	height:50px;
+	margin-left: -25px;
+	margin-top: -25px;
+}
+.list_song_gun .list_song_gun_i:hover .list_song_gun_play,.new_dish_gun .list_song_gun_i:hover .list_song_gun_play{
+	transform: scale(1.4);
+}
+
+/*------------------------------------------复用----------------------------------------------------*/
+.title{
+	display: flex;
+	width: 650px;
+	margin: 0 auto;
+	justify-content: space-around;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+.title a{
+	color: #333333;
+	font-size: 15px;
+}
+.img_fd:hover img{
+	transform: scale(1.1);
+	opacity: .8;
+}
+.img_move{
+	position: relative;
+	transition: opacity .2;
+	transition:.5s;
+	z-index:1;
+}
+
+.list_song_gun_i{
+	display: inline-block;
+	position: relative;
+	background: #000;
+	overflow: hidden;
+}
+
+.list_song_gun_play{
+	position: absolute;
+	z-index: 2;
+	background: url(../images/cover_play.png) no-repeat;
+	background-size: 100%;
+	opacity:0;
+	transition: .5s;
+	top:50%;
+	left: 50%;
+	transform: scale(1,1);
+}
+.list_song_gun_i:hover .list_song_gun_play{
+	opacity:1;
+}
+
+.color_gray{
+	font-size: 14px;
+	color: #999999;
+}
+.song_page{
+	position: absolute;
+	bottom:0px;
+	width: 100%;
+	min-width:1030px;
+	height: 50px;
+	text-align: center;
+}
+.song_page a{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: black;
+	border-radius: 50%;
+	margin: 0 10px;
+	opacity: .1;
+}
+.song_page a:hover{
+	opacity: .3;
+}
+.song_page .active{
+	opacity: .3;
+}
+.font{
+	width: 200px;
+	height:40px;
+	margin: 0 auto;
+	background: url(../images/index_tit.png) 0 0 no-repeat;
+}
+.more{
+	display:inline-block;
+	position: absolute;
+	font-size: 15px;
+	right:0;
+}
+/*------------------------------------------复用----------------------------------------------------*/
+
+/*-----------------------------------------新歌首发-------------------------------------------------*/
+.new_song{
+	position: relative;
+}
+.new_song_box{
+	margin: 0 auto;
+	overflow: hidden;
+}
+.new_song_box h2{
+	background-position: 0 -50px;
+}
+.new_song .play_all{
+	padding:8px 20px;
+	border: 1px solid #C9C9C9;
+	border-radius: 2px;
+	font-size: 14px;
+	position: relative;
+	top: 50px;
+}
+.new_song .play_all:hover{
+	color: #000000!important;
+	background-color: #EEEEEE;
+	
+}
+.new_song .play_all span{
+	font-size: 18px;
+	color:#999999;
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.new_song_box .list_song_title{
+	width: 450px;
+}
+.new_song_list{
+	
+}
+.new_song_list>div{
+	position: relative;
+	width: 1000%;
+	display: flex;
+	transition: 0.75s;
+	
+}
+
+.new_song_list ul{
+	position: relative;
+	margin-top: -1px;
+	width:10%;
+	float: left;
+	overflow: hidden;
+	
+}
+.new_song_list li{
+	position: relative;
+	width: 33.3%;
+	height: 115px;
+	padding: 15px 35px 15px 0;
+	border-top: 1px solid #F2F2F2;
+	font-size: 14px;
+	float: left;
+}
+.new_song_list .list_song_gun_i{
+	width: 85px;
+	height: 85px;
+	margin-right: 15px;	
+	float: left;
+}
+.new_song_list .list_song_gun_play{
+	width:30px;
+	height:30px;
+	margin-top: -15px;
+	margin-left: -15px;
+}
+.new_song_list .list_song_gun_i:hover .list_song_gun_play{
+	transform: scale(1.5,1.5);
+}
+.new_song_list .img_fd img{
+	width: 85px;
+	height: 85px;
+	top: 0;
+	left: 0;
+}
+.new_song_list .mg{
+	margin: 0 30px ;
+}
+.new_song_list .x_title{
+	display: inline-block;
+	width:50%;
+	font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	margin-top: 23px;
+	
+}
+.new_song_list li p a{
+	color: #999999!important;
+	font-size: 14px;
+}
+.new_song_list li p a:hover{
+	color: #31C27C!important;
+}
+.new_song_list li p:last-child{
+	font-size: 14px;
+	position: absolute;
+	top:50%;
+	right:30px;
+	margin-top: -14px;
+}
+/*-----------------------------------------精彩推荐-------------------------------------------------*/
+.commend{
+	position: relative;
+	
+}
+.commend_box{
+	overflow: hidden;
+	
+}
+.commend_box h2{
+	background-position: 0 -100px;
+}
+.commend_list{
+	margin-top: 30px;
+	margin-bottom: 65px;
+}
+.commend_list ul{
+	position: relative;
+	width: 1000%;
+	display: flex;
+	transition: 1s;
+	overflow: hidden;
+	left: -100%;
+}
+.commend_list ul li{
+	width:5%;
+}
+.commend_list ul li a{
+	display: inline-block;
+	width: 100%;
+	padding-right: 20px;
+}
+.commend_list img{
+	width: 100%;
+	height: 100%;
+}
+/*-----------------------------------------新碟首发-------------------------------------------------*/
+.new_dish {
+	position: relative;
+}
+.new_dish .more{
+	top: 65px;
+	right: 0;
+}
+.new_dish_title{
+	width: 420px;
+}
+.new_dish h2{
+	background-position: 0 -150px;
+}
+.new_dish_box{
+	position: relative;
+}
+.new_dish_gun{
+	
+	margin-bottom: -10px;
+}
+.new_dish_gun>div{
+	position: relative;
+	left: -100%;
+	width: 1000%;
+	display: flex;
+}
+.new_dish_gun ul{
+	position: relative;
+	width: 10%;
+	min-width: 920px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.new_dish_gun li{
+	/*width: 240px;
+	height: 300px;*/
+	width: 20%;
+	margin-bottom: 30px;
+}
+
+/*--------------------------------------------排行榜------------------------------------------------*/
+.ranking_list{
+	height: 42vw;
+	min-height:650px;
+}
+.ranking_list h2{
+	background-position: 0 -200px;
+}
+.ranking_list .more{
+	top:10px;
+}
+.ranking_list_box{
+	position: relative;
+}
+.top_list{
+	margin-top: 30px;
+	font-size: 14px;
+}
+.top_list>ul{
+	position: relative;
+	width:102%;
+	display: flex;
+	margin-left:-20px;
+}
+.top_list>ul>li{
+	width: 20%;
+	margin-left:20px;
+}
+.top_list>ul>li>div{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+.top_list .top_list_bg{
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: url(../images/bg_index_top.jpg) no-repeat;
+	transform: scale(1);
+	transition: .3s;
+	
+}
+.top_list_one:hover .top_list_bg,.top_list_two:hover .top_list_bg,.top_list_three:hover .top_list_bg,.top_list_four:hover .top_list_bg,.top_list_five:hover .top_list_bg{
+	transform: scale(1.05);
+}
+.top_list_one:hover .line,.top_list_two:hover .line,.top_list_three:hover .line,.top_list_four:hover .line,.top_list_five:hover .line{
+	opacity: 0;
+}
+.top_list_one:hover .list_song_gun_play,.top_list_two:hover .list_song_gun_play,.top_list_three:hover .list_song_gun_play,.top_list_four:hover .list_song_gun_play,.top_list_five:hover .list_song_gun_play{
+	transform: scale(1.3);
+	opacity:1;
+}
+.top_list_two .top_list_bg{
+	background-position-x:-224px;
+}
+.top_list_three .top_list_bg{
+	background-position-x:-448px;
+}
+.top_list_four .top_list_bg{
+	background-position-x:-672px;
+}
+.top_list_five .top_list_bg{
+	background-position-x:-896px;
+}
+.top_list h3::before{
+	display: block;
+	width: 66px;
+	height: 30px;
+	margin: 0 auto;
+	content:"";
+	background: url(../images/index_tit.png) no-repeat;
+	background-position: 0 -300px;
+}
+.top_list h3{
+	width:100%;
+	height: auto;
+	margin-top: 50px;
+	text-align: center;
+}
+.top_list a,.top_list{
+	color: white;
+}
+.top_list a:hover{
+	color: white!important;
+}
+.top_list .line{
+	display: block;
+	width: 40px;
+	height: 2px;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 5px;
+}
+.top_list .list_song_gun_play{
+	width: 40px;
+	height: 40px;
+	top: 129px;
+	margin-left: -20px;
+	transition: .5s;
+	cursor: pointer;
+}
+.top_list_div ul li{
+	margin-top: 30px;
+	position: relative;
+}
+.top_list_div ul li div:nth-child(1){
+	position: absolute;
+	left: 30px;
+}
+.top_list_div ul li div:not(:nth-child(1)){
+	margin-left: 45px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.top_list_div ul li div:nth-child(3){
+	margin-top: 5px;
+}
+/*-----------------------------------------------MV------------------------------------------------*/
+.song_mv_title{
+	width: 500px;
+}
+.song_mv_gun h2{
+	background-position: 0 -250px;
+}
+.song_mv_gun{
+	width: 100%;
+	margin-bottom: 40px;
+}
+.song_mv_gun>div{
+	position: relative;
+	left: -100%;
+	display: flex;
+	width: 1000%;
+}
+.song_mv_gun ul{
+	width: 10%;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+.song_mv_gun ul li{
+	width:20%;
+	margin-bottom: 1%;
+	padding-right: 20px;
+}
+.song_mv_gun ul li a:nth-child(1){
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.song_mv_gun .list_song_gun_play{
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	margin-top: -20px;
+	transition: .5s;
+}
+.song_mv_gun ul li a:nth-child(1):hover .list_song_gun_play{
+	transform:scale(1.7);
+}
+.song_mv_gun ul li h4{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.song_mv_gun p{
+	display: block;
+}
+.song_mv_gun p span{
+	margin-right: 5px;
+}
+/*--------------------------------------------底部--------------------------------------------------*/
